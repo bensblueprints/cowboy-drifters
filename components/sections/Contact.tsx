@@ -409,8 +409,8 @@ export default function Contact() {
             {/* Landscape Image */}
             <div className="mt-10 relative rounded-2xl overflow-hidden aspect-[16/9]" style={{ border: "1px solid #44403C" }}>
               <Image
-                src="/images/wyoming-landscape.jpg"
-                alt="Wyoming landscape along the North Platte River"
+                src="/images/gallery-8.jpg"
+                alt="Fly fishing catch on the North Platte River"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

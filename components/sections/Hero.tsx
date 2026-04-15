@@ -134,7 +134,7 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 text-center">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 text-center pb-40">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -199,63 +199,63 @@ export default function Hero() {
             </a>
           </motion.div>
         </motion.div>
-
-        {/* Stats Row */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="absolute bottom-10 left-0 right-0 mx-auto max-w-5xl px-6"
-        >
-          <div
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 md:divide-x rounded-xl py-6 px-4 backdrop-blur-sm"
-            style={{
-              backgroundColor: "rgba(28,25,23,0.6)",
-              borderColor: "rgba(255,196,37,0.1)",
-              borderWidth: 1,
-            }}
-          >
-            {stats.map((stat, i) => (
-              <div
-                key={i}
-                className="flex flex-col items-center justify-center"
-                style={{
-                  borderColor: "rgba(255,196,37,0.15)",
-                }}
-              >
-                <span
-                  className="text-2xl md:text-3xl font-bold"
-                  style={{ color: "#FFC425" }}
-                >
-                  {stat.isText ? (
-                    stat.label === "Blue Ribbon Waters" ? (
-                      "Blue Ribbon"
-                    ) : (
-                      "All Levels"
-                    )
-                  ) : (
-                    <CountUp
-                      target={stat.value}
-                      suffix={stat.suffix}
-                      decimals={stat.decimals || 0}
-                    />
-                  )}
-                </span>
-                <span
-                  className="text-xs md:text-sm mt-1 tracking-wide uppercase"
-                  style={{ color: "#A8A29E" }}
-                >
-                  {stat.isText
-                    ? stat.label === "Blue Ribbon Waters"
-                      ? "Waters"
-                      : "Welcome"
-                    : stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
+
+      {/* Stats Row - positioned at bottom of section */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 1 }}
+        className="absolute bottom-8 left-0 right-0 z-10 mx-auto max-w-5xl px-6"
+      >
+        <div
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 md:divide-x rounded-xl py-6 px-4 backdrop-blur-sm"
+          style={{
+            backgroundColor: "rgba(28,25,23,0.6)",
+            borderColor: "rgba(255,196,37,0.1)",
+            borderWidth: 1,
+          }}
+        >
+          {stats.map((stat, i) => (
+            <div
+              key={i}
+              className="flex flex-col items-center justify-center"
+              style={{
+                borderColor: "rgba(255,196,37,0.15)",
+              }}
+            >
+              <span
+                className="text-2xl md:text-3xl font-bold"
+                style={{ color: "#FFC425" }}
+              >
+                {stat.isText ? (
+                  stat.label === "Blue Ribbon Waters" ? (
+                    "Blue Ribbon"
+                  ) : (
+                    "All Levels"
+                  )
+                ) : (
+                  <CountUp
+                    target={stat.value}
+                    suffix={stat.suffix}
+                    decimals={stat.decimals || 0}
+                  />
+                )}
+              </span>
+              <span
+                className="text-xs md:text-sm mt-1 tracking-wide uppercase"
+                style={{ color: "#A8A29E" }}
+              >
+                {stat.isText
+                  ? stat.label === "Blue Ribbon Waters"
+                    ? "Waters"
+                    : "Welcome"
+                  : stat.label}
+              </span>
+            </div>
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 }

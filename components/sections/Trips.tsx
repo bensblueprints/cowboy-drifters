@@ -20,13 +20,13 @@ const trips = [
     title: "Fremont Canyon",
     description:
       "Deep canyon walls and crystal-clear water make Fremont Canyon a unique Wyoming fishing experience. Walk-wade and float options available.",
-    image: "/images/fishing-hero.jpg",
+    image: "/images/gallery-9.jpg",
   },
   {
     title: "Bighorn River",
     description:
       "Journey to Thermopolis for some of the best dry fly fishing in the West. The Bighorn offers incredible hatches and aggressive trout.",
-    image: "/images/fishing-river.jpg",
+    image: "/images/gallery-7.jpg",
   },
 ];
 
